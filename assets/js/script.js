@@ -1,5 +1,6 @@
 // Assignment code here
-
+var promptpass = window.prompt ("would you like ")
+  if (promptpass )
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
