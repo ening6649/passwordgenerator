@@ -16,41 +16,95 @@ var generatePassword = function () {
         randomNumber(0,9);
         
         password= randomNumber(0,9);
+
+        console.log(password)
+        switch (password) {
+          case 0:
+            password = "0";
+            break;
+          case 1:
+            password = "1";
+            break;
+          case 2:
+            password = "2";
+            break;
+          case 3:
+            password = "3";
+            break;
+          case 4:
+            password = "4";
+            break;
+          case 5:
+            password = "5";
+            break;
+          case 6:
+            password = "6";
+            break;
+          case 7:
+            password = "7";
+            break;
+          case 8:
+            password = "8";
+          case 9:
+            password = "9";
+          case 10:
+            password = "a";
+          case 11:
+            password = "b";
+          case 12:
+            password = "c"
+          case 13
+
+        
+        }
         console.log(password)
       }
     } else {
       window.alert ("You did not choose a valid number");
       generatePassword();
-  // or re run the start 
+  //  re run the start 
     }
   
 };
 
 generatePassword();
 
-var upperCase = window.confirm("Would you like to include uppercase letters?")
-  if (upperCase) {
-    // include upperCase in generatePassword
-  }
-var numeric = window.confirm("Would you like to include numbers?")
-  if (numeric) {
-    // include numbers in generatePassword
-  }
-var specialCharacters = window.confirm("Would you like to include special characters?")
-  if (specialCharacters) {
+
+
+
+
+
+
+// for(var i=0; i< 9; i++ ) {
+//   randomNumber(lowerCase, lowerCase);
+//   letter = randomNumber(lowerCase, lowerCase);
+//   console.log(letter); 
+// }  
+
+
+// var upperCase = window.confirm("Would you like to include uppercase letters?")
+//   if (upperCase) {
+//     // include upperCase in generatePassword
+//   }
+// var lowerCase = window.confirm("Would you like to include letters?")
+//   if (lowerCase) {
+//     // include letters in generatePassword
+//   }
+// var specialCharacters = window.confirm("Would you like to include special characters?")
+//   if (specialCharacters) {
     // include special character in generatePassword
-  }
+  // }
 
-
-// for(var i=0; i<passwordLength;i++) {
-//   var randomNumber = function(min,max) {
-//   var value = Math.floor(Math.random() * (max-min +1) + min);
-//   // returns and stores a value , also ends function exectuion 
-//   return value;
-//   };
-//   console.log (randomNumber(0,9));
-//   generatedNumber = randomNumber (0,9);
+// object to insert special cases 
+// var allCharacter = {
+//   number: 
+//   upperCase
+//   lowerCase
+//   specialCharacters
 // }
+
+
+
 
 
 
