@@ -46,42 +46,42 @@ var generatePassword = function () {
               randomNumber (0, 35);
               password = randomNumber (0,35);
             } 
-            // if (numberConfirm && lowerCaseConfirm && upperCaseConfirm) {
-            //   randomNumber (0,61);
-            //   password = randomNumber (0,61);
-            // } 
-            // if (numberConfirm && lowerCaseConfirm && upperCaseConfirm && specialCharacterConfirm) {
-            //   randomNumber (0,71);
-            //   password = randomNumber (0,71);
-            // }  
-            // if (lowerCaseConfirm) {
-            //   randomNumber (10,35);
-            //   password = (10,35);
-            // }  
-            // if (lowerCaseConfirm && upperCaseConfirm) {
-            //   randomNumber (10, 61);
-            //   password = (10,61);
-            // } 
-            // if (lowerCaseConfirm && upperCaseConfirm && specialCharacterConfirm) {
-            //   randomNumber (10, 71);
-            //   password = (10,71);
-            // }  
-            // if (upperCaseConfirm) {
-            //   randomNumber (35,61);
-            //   password = randomNumber (35,61);
-            // }  
-            // if (upperCaseConfirm && specialCharacterConfirm) {
-            //   randomNumber (35,71);
-            //   password = randomNumber (35,71);
-            // } 
-            // if (specialCharacterConfirm && upperCaseConfirm && numberConfirm) {
-            //   randomNumber ();
-            //   password = randomNumber ();
-            // }
-            // if (lowerCaseConfirm && upperCaseConfirm && specialCharacterConfirm) {
-            //   randomNumber (10,71);
-            //   password = randomNumber (10,71);
-            // }
+            if (numberConfirm && lowerCaseConfirm && upperCaseConfirm) {
+              randomNumber (0,61);
+              password = randomNumber (0,61);
+            } 
+            if (numberConfirm && lowerCaseConfirm && upperCaseConfirm && specialCharacterConfirm) {
+              randomNumber (0,71);
+              password = randomNumber (0,71);
+            }  
+            if (lowerCaseConfirm) {
+              randomNumber (10,35);
+              password = (10,35);
+            }  
+            if (lowerCaseConfirm && upperCaseConfirm) {
+              randomNumber (10, 61);
+              password = (10,61);
+            } 
+            if (lowerCaseConfirm && upperCaseConfirm && specialCharacterConfirm) {
+              randomNumber (10, 71);
+              password = (10,71);
+            }  
+            if (upperCaseConfirm) {
+              randomNumber (35,61);
+              password = randomNumber (35,61);
+            }  
+            if (upperCaseConfirm && specialCharacterConfirm) {
+              randomNumber (35,71);
+              password = randomNumber (35,71);
+            } 
+            if (specialCharacterConfirm && upperCaseConfirm && numberConfirm) {
+              randomNumber ();
+              password = randomNumber ();
+            }
+            if (lowerCaseConfirm && upperCaseConfirm && specialCharacterConfirm) {
+              randomNumber (10,71);
+              password = randomNumber (10,71);
+            }
             // if (upperCaseConfirm && numberConfirm) {
             //   randomNumber ();
             //   password = randomNumber ()
@@ -175,9 +175,93 @@ var generatePassword = function () {
               case 24:
                 password = "o";
                 break;
-              
-        
-            
+              case 25:
+                password = "p";
+                break;
+              case 26:
+                password = "q";
+                break;
+              case 27:
+                password = "r";
+                break;
+              case 28: 
+                password = "s";
+                break;
+              case 29:
+                password = "t";
+                break;
+              case 30:
+                password = "u";
+                break;
+              case 31:
+                password = "v";
+                break;
+              case 32:
+                password = "w"
+                break;
+              case 33:
+                password = "x";
+                break;
+              case 34:
+                password = "y";
+                break;
+              case 35:
+                password = "z";
+                break;
+              case 36:
+                password = "A";
+                break;
+              case 37:
+                password = "B";
+                break;
+              case 38:
+                password = "C";
+                break;
+              case 39:
+                password = "D";
+                break;
+              case 40:
+                password = "E";
+                break;
+              case 41:
+                password = "F";
+                break;
+              case 42:
+                password = "G";
+                break;
+              case 43:
+                password = "H";
+                break;
+              case 44:
+                password = "I";
+                break;
+              case 45:
+                password = "J";
+                break;
+              case 46:
+                password = "K";
+                break;
+              case 47:
+                password = "L";
+                break;
+              case 48:
+                password = "M";
+                break;
+              case 49:
+                password = "N";
+                break;
+              case 50:
+                password = "O";
+                break;
+              case 51:
+                password = "P";
+                break;
+              case 52:
+                password = "Q";
+                break;
+              case 53:
+                password = "R";
+                break;          
             }  
             
             
@@ -187,7 +271,7 @@ var generatePassword = function () {
       
     } else {
       window.alert ("You did not choose a valid number");
-      generatePassword();
+      
   //  re run the start 
     }
     
@@ -214,17 +298,17 @@ generatePassword();
 
 
 
-// // Get references to the #generate element
-// var generateBtn = document.querySelector("#generate");
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
   
-// }
+}
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
