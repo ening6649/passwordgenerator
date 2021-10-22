@@ -2,10 +2,10 @@
 
 
 // random Number generator 
-var randomNumber= function(min,max) {
-  var value = Math.floor(Math.random()*(max-min+1)+min);
-  return value;
-}
+// var randomNumber= function(min,max) {
+//   var value = Math.floor(Math.random()*(max-min+1)+min);
+//   return value;
+// }
 
 // arrays of password
 var number = ['0','1','2','3','4','5','6','7','8','9']
@@ -33,6 +33,8 @@ var generatePassword = function () {
   
     if (upperCaseConfirm) {
       mixMatch = mixMatch.concat(upperCase);
+      // let oneUpper = randomNumber(0, upperCase.length);
+
     }
     if (lowerCaseConfirm) {
       mixMatch = mixMatch.concat(lowerCase);
@@ -47,7 +49,7 @@ var generatePassword = function () {
   var password = "";
   // loop for random password 
   for (var i=0; i<passwordLength; i++) {  
-    randomNumber(0, passwordLength);
+    // randomNumber(0, passwordLength);
     let randomIndex= Math.floor(Math.random() * mixMatch.length);
     password += mixMatch[randomIndex]
     // console.log(mixMatch[password])
@@ -55,6 +57,7 @@ var generatePassword = function () {
   };
   return password;
 }
+
 
 
 
