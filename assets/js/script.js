@@ -7,27 +7,22 @@ var randomNumber= function(min,max) {
   return value;
 }
 
-// var randomNumber = function (myNumber) {
-//   var value = Math.floor(Math.random()*(myNumber+1)*10);
-//   return value;
-// }
-
+// arrays of password
 var number = ['0','1','2','3','4','5','6','7','8','9']
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" ]
-var upperCase = ["A", "B", "C","D","E","F","G","H","I","J","K","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+var upperCase = ["A", "B", "C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var specialCharacter = ["!", "@", "#", "$", "%", "^", "&","*","(",")"]
-
+// empty array
 var mixMatch = []
 
 
 
 var generatePassword = function () {
+  // prompt for length
   var passwordLength = window.prompt ("Choose your password length, enter a number between 8 and 128 ");
-    // if (passwordLength >=8 && passwordLength <=128) {
-  //   generatePassword();
-  // } else {
-  //   alert ("You did not choose a valid number");
-  // }
+  
+
+  // prompt for types
   let upperCaseConfirm = confirm("Would you like to include uppercase?");
   let lowerCaseConfirm = confirm("Would you like to include lowercase?");
   let specialCharacterConfirm = confirm("Would you like to include special characters?");
@@ -47,6 +42,7 @@ var generatePassword = function () {
     } 
     
   var password = "";
+  // loop for random password 
   for (var i=0; i<passwordLength; i++) {  
     randomNumber(0, passwordLength);
     let randomIndex= Math.floor(Math.random() * mixMatch.length);
