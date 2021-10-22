@@ -20,7 +20,10 @@ var mixMatch = []
 var generatePassword = function () {
   // prompt for length
   var passwordLength = window.prompt ("Choose your password length, enter a number between 8 and 128 ");
-  
+  if (passwordLength<8 || passwordLength>128) {
+    alert("You did not choose a valid number")
+    generatePassword();
+  }
 
   // prompt for types
   let upperCaseConfirm = confirm("Would you like to include uppercase?");
