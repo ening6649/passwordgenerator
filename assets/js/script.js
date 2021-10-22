@@ -19,43 +19,45 @@ var specialCharacter = ["!", "@", "#", "$", "%", "^", "&","*","(",")"]
 
 var mixMatch = []
 
-var passwordLength = window.prompt ("Choose your password length, enter a number between 8 and 128 ");
+
 
 var generatePassword = function () {
+  var passwordLength = window.prompt ("Choose your password length, enter a number between 8 and 128 ");
+    // if (passwordLength >=8 && passwordLength <=128) {
+  //   generatePassword();
+  // } else {
+  //   alert ("You did not choose a valid number");
+  // }
   let upperCaseConfirm = confirm("Would you like to include uppercase?");
   let lowerCaseConfirm = confirm("Would you like to include lowercase?");
   let specialCharacterConfirm = confirm("Would you like to include special characters?");
   let numberConfirm = confirm("Would you like to include numbers?");
-  for (var i=0; i<passwordLength; i++) {
+  
     if (upperCaseConfirm) {
-      // mixMatch = Array.from(upperCase[i]);
-      mixMatch.push.apply(upperCase)
+      mixMatch = mixMatch.concat(upperCase);
     }
     if (lowerCaseConfirm) {
-      // mixMatch = Array.from(lowerCase[i]);
-      mixMatch.push.apply(lowerCase)
+      mixMatch = mixMatch.concat(lowerCase);
     }
     if (specialCharacterConfirm) {
-      // mixMatch = Array.from(specialCharacter[i]);
-      mixMatch.push.apply(specialCharacter)
-    }
+      mixMatch =mixMatch.concat(specialCharacter)
+    }  
     if (numberConfirm) {
-      // mixMatch = Array.from(number[i]);
-      mixMatch.push.apply(number)
+      mixMatch = mixMatch.concat(number)
     } 
-    password = randomNumber(0, mixMatch.length);
-     console.log(mixMatch.length)
-    return password;
+    
+  var password = "";
+  for (var i=0; i<passwordLength; i++) {  
+    randomNumber(0, passwordLength);
+    let randomIndex= Math.floor(Math.random() * mixMatch.length);
+    password += mixMatch[randomIndex]
+    // console.log(mixMatch[password])
+    console.log(password)
   };
-  
- 
+  return password;
 }
 
-if (passwordLength >=8 && passwordLength <=128) {
-  generatePassword();
-} else {
-  alert ("You did not choose a valid number");
-}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -71,3 +73,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
